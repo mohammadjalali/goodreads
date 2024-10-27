@@ -64,6 +64,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         token = Token.objects.filter(user=self).first()
         if not token:
             token = Token.objects.create(user=self)
+            token.save()
         return token.key
 
     def __str__(self):
