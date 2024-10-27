@@ -1,3 +1,8 @@
+[project]
+name = "goodreads"
+requires-python = ">=3.12"
+pythonpath=[".", "src"]
+
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "goodreads.core.settings"
 pythonpath = [".", "./src"]

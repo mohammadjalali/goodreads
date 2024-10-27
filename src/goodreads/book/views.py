@@ -1,15 +1,12 @@
+from book import models, serializers
 from django.contrib.auth import get_user_model
+from django.db.models import Avg, Count, Exists, OuterRef
 from django.shortcuts import get_object_or_404
-from django.db.models import Exists, OuterRef, Count, Avg
-from rest_framework import viewsets
-from rest_framework.decorators import action
-from rest_framework.response import Response
-from rest_framework.request import Request
-from rest_framework import status
 from drf_spectacular.utils import extend_schema
-
-from book import models
-from book import serializers
+from rest_framework import status, viewsets
+from rest_framework.decorators import action
+from rest_framework.request import Request
+from rest_framework.response import Response
 
 
 class BookAPIView(viewsets.ViewSet):
@@ -40,33 +37,27 @@ class BookDetailAPIView(viewsets.ViewSet):
         """
         Get detail of a book
         """
-        breakpoint()
         book = get_object_or_404(models.Book, pk=pk)
-        comments_count = models.Comment.objects.filter(book=book).count()
-        rate_data = models.Comment.objects.filter(book=book).aggregate(
-            rates_count=Count("rate"), rates_average=Avg("rate")
-        )
-        distinct_rates_count = (
-            models.Comment.objects.filter(book=book)
-            .values("rate")
-            .annotate(rate_count=Count("rate"))
-        )
-        distinct_rates_dict = {
-            rate["rate"]: rate["rate_count"] for rate in distinct_rates_count
-        }
-        user_comments_and_rates = models.Comment.objects.filter(book=book).values(
-            "user__username", "rate", "comment"
-        )
+        comments = models.Comment.objects.filter(book=book)
+        comments_count = comments.aggregate(Count("comment"))["comment__count"]
+        rates_count = comments.aggregate(Count("rate"))["rate__count"]
+        rates_average = comments.aggregate(Avg("rate"))["rate__avg"]
+        distinct_rates_count = dict()
+        for comment in comments:
+            if not comment.rate in distinct_rates_count:
+                distinct_rates_count[comment.rate] = 0
+            distinct_rates_count[comment.rate] += 1
+        comments_data = serializers.CommentSerializer(comments, many=True).data
         data = {
             "name": book.name,
             "summery": book.summery,
             "comments_count": comments_count,
-            "rates_count": rate_data["rates_count"] or 0,
-            "rates_average": rate_data["rates_average"] or 0,
-            "distinct_rates_count": distinct_rates_dict,
-            "user_comments_and_rates": list(user_comments_and_rates),
+            "rates_count": rates_count,
+            "rates_average": rates_average,
+            "distinct_rates_count": distinct_rates_count,
+            "comments": comments_data,
         }
 
         serializer = serializers.BookDetailSerializer(data=data)
-        serializer.is_valid()
+        serializer.is_valid(raise_exception=True)
         return Response(serializer.data)

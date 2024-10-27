@@ -1,0 +1,243 @@
+[
+    {
+      "model": "book.bookmark",
+      "pk": 1,
+      "fields": {
+        "user": 1,
+        "book": 1
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 2,
+      "fields": {
+        "user": 2,
+        "book": 2
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 3,
+      "fields": {
+        "user": 3,
+        "book": 3
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 4,
+      "fields": {
+        "user": 4,
+        "book": 4
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 5,
+      "fields": {
+        "user": 5,
+        "book": 5
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 6,
+      "fields": {
+        "user": 6,
+        "book": 6
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 7,
+      "fields": {
+        "user": 7,
+        "book": 7
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 8,
+      "fields": {
+        "user": 8,
+        "book": 8
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 9,
+      "fields": {
+        "user": 9,
+        "book": 9
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 10,
+      "fields": {
+        "user": 10,
+        "book": 10
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 11,
+      "fields": {
+        "user": 11,
+        "book": 11
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 12,
+      "fields": {
+        "user": 12,
+        "book": 12
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 13,
+      "fields": {
+        "user": 13,
+        "book": 13
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 14,
+      "fields": {
+        "user": 14,
+        "book": 14
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 15,
+      "fields": {
+        "user": 15,
+        "book": 15
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 16,
+      "fields": {
+        "user": 16,
+        "book": 16
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 17,
+      "fields": {
+        "user": 17,
+        "book": 17
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 18,
+      "fields": {
+        "user": 18,
+        "book": 18
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 19,
+      "fields": {
+        "user": 19,
+        "book": 19
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 20,
+      "fields": {
+        "user": 20,
+        "book": 20
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 21,
+      "fields": {
+        "user": 21,
+        "book": 21
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 22,
+      "fields": {
+        "user": 22,
+        "book": 22
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 23,
+      "fields": {
+        "user": 10,
+        "book": 23
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 24,
+      "fields": {
+        "user": 10,
+        "book": 24
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 25,
+      "fields": {
+        "user": 12,
+        "book": 25
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 26,
+      "fields": {
+        "user": 11,
+        "book": 26
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 27,
+      "fields": {
+        "user": 22,
+        "book": 27
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 28,
+      "fields": {
+        "user": 13,
+        "book": 28
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 29,
+      "fields": {
+        "user": 14,
+        "book": 29
+      }
+    },
+    {
+      "model": "book.bookmark",
+      "pk": 30,
+      "fields": {
+        "user": 10,
+        "book": 30
+      }
+    }
+  ]
+  

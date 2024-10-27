@@ -1,4 +1,4 @@
-from goodreads.book.models import Book
+from book.models import Book
 
 
 def test_create_book():

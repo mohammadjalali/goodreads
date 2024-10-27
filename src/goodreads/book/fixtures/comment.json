@@ -1,0 +1,313 @@
+[
+    {
+      "model": "book.comment",
+      "pk": 1,
+      "fields": {
+        "rate": 5,
+        "comment": "Amazing book, highly recommend!",
+        "book": 1,
+        "user": 1
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 2,
+      "fields": {
+        "rate": 4,
+        "comment": "Great read, but a bit slow at times.",
+        "book": 2,
+        "user": 2
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 3,
+      "fields": {
+        "rate": 3,
+        "comment": "It was okay, not my favorite.",
+        "book": 3,
+        "user": 3
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 4,
+      "fields": {
+        "rate": 2,
+        "comment": "Not what I expected.",
+        "book": 4,
+        "user": 4
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 5,
+      "fields": {
+        "rate": 1,
+        "comment": "Very disappointing, wouldn’t recommend.",
+        "book": 5,
+        "user": 5
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 6,
+      "fields": {
+        "rate": 4,
+        "comment": "Pretty good overall.",
+        "book": 6,
+        "user": 6
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 7,
+      "fields": {
+        "rate": 3,
+        "comment": "Had some interesting points, but lacked depth.",
+        "book": 7,
+        "user": 7
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 8,
+      "fields": {
+        "rate": 2,
+        "comment": "I struggled to finish it.",
+        "book": 8,
+        "user": 8
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 9,
+      "fields": {
+        "rate": 5,
+        "comment": "One of the best books I’ve ever read!",
+        "book": 9,
+        "user": 9
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 10,
+      "fields": {
+        "rate": 1,
+        "comment": "Terrible writing, wouldn’t recommend.",
+        "book": 10,
+        "user": 10
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 11,
+      "fields": {
+        "rate": 4,
+        "comment": "Enjoyed it, but some parts were predictable.",
+        "book": 11,
+        "user": 11
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 12,
+      "fields": {
+        "rate": 3,
+        "comment": "Average read.",
+        "book": 12,
+        "user": 12
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 13,
+      "fields": {
+        "rate": 2,
+        "comment": "Not my cup of tea.",
+        "book": 13,
+        "user": 13
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 14,
+      "fields": {
+        "rate": 5,
+        "comment": "Loved every minute of it!",
+        "book": 14,
+        "user": 14
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 15,
+      "fields": {
+        "rate": 4,
+        "comment": "A solid book.",
+        "book": 15,
+        "user": 15
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 16,
+      "fields": {
+        "rate": 3,
+        "comment": "Decent but could have been better.",
+        "book": 16,
+        "user": 16
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 17,
+      "fields": {
+        "rate": 2,
+        "comment": "Found it a bit boring.",
+        "book": 17,
+        "user": 17
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 18,
+      "fields": {
+        "rate": 5,
+        "comment": "Amazing, couldn’t put it down.",
+        "book": 18,
+        "user": 18
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 19,
+      "fields": {
+        "rate": 4,
+        "comment": "A good book but not a must-read.",
+        "book": 19,
+        "user": 19
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 20,
+      "fields": {
+        "rate": 1,
+        "comment": "A waste of time.",
+        "book": 20,
+        "user": 20
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 21,
+      "fields": {
+        "rate": 3,
+        "comment": "It’s okay, nothing special.",
+        "book": 21,
+        "user": 21
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 22,
+      "fields": {
+        "rate": 4,
+        "comment": "Engaging but could use better pacing.",
+        "book": 22,
+        "user": 22
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 23,
+      "fields": {
+        "rate": 5,
+        "comment": "Fantastic story, highly recommend!",
+        "book": 23,
+        "user": 1
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 24,
+      "fields": {
+        "rate": 4,
+        "comment": "Solid read, enjoyed it.",
+        "book": 24,
+        "user": 2
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 25,
+      "fields": {
+        "rate": 3,
+        "comment": "Not bad but not great either.",
+        "book": 25,
+        "user": 3
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 26,
+      "fields": {
+        "rate": 2,
+        "comment": "Didn’t hold my attention.",
+        "book": 26,
+        "user": 4
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 27,
+      "fields": {
+        "rate": 1,
+        "comment": "Couldn’t finish it.",
+        "book": 27,
+        "user": 5
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 28,
+      "fields": {
+        "rate": 5,
+        "comment": "One of my favorite books of all time.",
+        "book": 28,
+        "user": 6
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 29,
+      "fields": {
+        "rate": 4,
+        "comment": "Well-written and engaging.",
+        "book": 29,
+        "user": 7
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 30,
+      "fields": {
+        "rate": 3,
+        "comment": "Good but not as good as I expected.",
+        "book": 30,
+        "user": 8
+      }
+    },
+    {
+      "model": "book.comment",
+      "pk": 31,
+      "fields": {
+        "rate": 3,
+        "comment": "Good but not as good as I expected.",
+        "book": 20,
+        "user": 8
+      }
+    }
+  ]
+  
