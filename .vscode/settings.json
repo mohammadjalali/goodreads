@@ -7,8 +7,5 @@
     "python.testing.autoTestDiscoverOnSaveEnabled": true,
     "python.analysis.extraPaths": [
         "./src/goodreads",
-        "./src",
-        "./src",
-        "./src/goodreads"
     ],
 }

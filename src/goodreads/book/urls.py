@@ -1,6 +1,5 @@
-from django.urls import path
-
 from book import views
+from django.urls import path
 
 urlpatterns = [
     path("books/", views.BookAPIView.as_view({"get": "list"}), name="books"),
@@ -9,7 +8,7 @@ urlpatterns = [
         views.BookDetailAPIView.as_view({"get": "retrieve"}),
         name="book-detail",
     ),
-    path("bookmark/<int:book_pk>/", views.BookMarkModelView.as_view(), name="bookmark"),
+    path("bookmark/<int:book_pk>/", views.BookMarkAPIView.as_view(), name="bookmark"),
     path(
         "bookmarks/",
         views.BookMarkAPIViewset.as_view({"get": "list"}),

@@ -1,9 +1,7 @@
+from book.models.book import Book
 from django.conf import settings
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
-from django.db.models import Q
-
-from book.models.book import Book
 
 
 class Comment(models.Model):
@@ -14,3 +12,6 @@ class Comment(models.Model):
     comment = models.TextField(null=True, blank=True)
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+
+    def __str__(self):
+        self.book.name

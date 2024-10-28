@@ -1,5 +1,4 @@
-from django.contrib import admin
-
 from book import models
+from django.contrib import admin
 
 admin.site.register(models.Book)

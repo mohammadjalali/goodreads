@@ -1,7 +1,8 @@
 from copy import copy
-from typing import Any, Mapping
+from typing import Mapping
 
-from django.db.models import Avg, Count, Exists, OuterRef
+from book import models, serializers
+from django.db.models import Avg, Count, Exists, OuterRef, QuerySet
 from django.db.utils import IntegrityError
 from django.shortcuts import get_object_or_404
 from drf_spectacular.utils import extend_schema
@@ -9,8 +10,6 @@ from rest_framework import (authentication, generics, permissions, status,
                             views, viewsets)
 from rest_framework.request import Request
 from rest_framework.response import Response
-
-from book import models, serializers
 from user.models import User
 
 
@@ -63,7 +62,9 @@ class BookDetailAPIView(viewsets.ViewSet):
         serializer.is_valid(raise_exception=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
-    def _get_distinct_rates_count(self, comments: models.Comment) -> Mapping[int, int]:
+    def _get_distinct_rates_count(
+        self, comments: QuerySet[models.Comment]
+    ) -> Mapping[int, int]:
         distinct_rates_count = dict()
         for comment in comments:
             if not comment.rate in distinct_rates_count:
@@ -72,7 +73,7 @@ class BookDetailAPIView(viewsets.ViewSet):
         return distinct_rates_count
 
 
-class BookMarkModelView(views.APIView):
+class BookMarkAPIView(views.APIView):
     authentication_classes = [authentication.TokenAuthentication]
     permission_classes = [permissions.IsAuthenticated]
 
@@ -83,6 +84,11 @@ class BookMarkModelView(views.APIView):
         """
         user = request.user
         book = get_object_or_404(models.Book, pk=book_pk)
+        if models.Comment.objects.filter(user=user, book=book):
+            return Response(
+                {"message": "User is already has a comment or rate on the book."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
         try:
             bookmark = models.BookMark.objects.create(user=user, book=book)
         except IntegrityError:
@@ -158,7 +164,7 @@ class CommentAPIView(views.APIView):
         self, request_validated_data, user: User
     ) -> serializers.CommentModelSerializer:
         validated_data = copy(request_validated_data)
-        validated_data["user"] = user.id
+        validated_data["user"] = user.pk
         if "book" in validated_data:
             validated_data["book"] = request_validated_data["book"].id
         comment_serializer = serializers.CommentModelSerializer(data=validated_data)
