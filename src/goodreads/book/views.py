@@ -2,7 +2,8 @@ from copy import copy
 from typing import Mapping
 
 from book import models, serializers
-from django.db.models import Avg, Count, Exists, OuterRef, QuerySet
+from django.db.models import Avg, Count, Exists, OuterRef, QuerySet, Value
+from django.db.models.functions import Coalesce
 from django.db.utils import IntegrityError
 from django.shortcuts import get_object_or_404
 from drf_spectacular.utils import extend_schema
@@ -13,6 +14,7 @@ from user.models import User
 
 
 class BookAPIView(viewsets.ViewSet):
+    authentication_classes = [authentication.TokenAuthentication]
 
     @extend_schema(
         responses=serializers.BookInfoSerializer,
@@ -23,8 +25,17 @@ class BookAPIView(viewsets.ViewSet):
         """
         books = models.Book.objects.annotate(
             book_marks_count=Count("bookmark"),
-            is_book_marked=Exists(
-                models.BookMark.objects.filter(book=OuterRef("pk"), user=request.user)
+            is_book_marked=Coalesce(
+                (
+                    Exists(
+                        models.BookMark.objects.filter(
+                            book=OuterRef("pk"), user=request.user
+                        )
+                    )
+                    if request.user.is_authenticated
+                    else Value(False)
+                ),
+                Value(False),
             ),
         )
 
