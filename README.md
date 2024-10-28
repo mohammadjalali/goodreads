@@ -12,7 +12,7 @@ You can see the apis and use them from [swagger](localhost:8000/api/schema/swagg
 or [redoc](localhost:8000/api/schema/redoc/).
 
 If you like to have some data, you can load the fixtures. You must go to the
-`goodreads-backend` container, cd to the `.scripts` directory, and run the load_fixtures.sh.
+`goodreads-backend` container, cd to the `.scripts` directory, and run the `load_fixtures.sh`.
 
 ```bash
 1. docker exec -it goodreads-backend sh
