@@ -6,8 +6,7 @@ from django.db.models import Avg, Count, Exists, OuterRef, QuerySet
 from django.db.utils import IntegrityError
 from django.shortcuts import get_object_or_404
 from drf_spectacular.utils import extend_schema
-from rest_framework import (authentication, generics, permissions, status,
-                            views, viewsets)
+from rest_framework import authentication, permissions, status, views, viewsets
 from rest_framework.request import Request
 from rest_framework.response import Response
 from user.models import User
