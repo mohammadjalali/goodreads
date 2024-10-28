@@ -11,7 +11,7 @@ docker compose up --build
 You can see the apis and use them from [swagger](localhost:8000/api/schema/swagger-ui/)
 or [redoc](localhost:8000/api/schema/redoc/).
 
-If you like to have some data, you can load the fixtures. First of all, you must go to the
+If you like to have some data, you can load the fixtures. You must go to the
 `goodreads-backend` container, cd to the `.scripts` directory, and run the load_fixtures.sh.
 
 ```bash
