@@ -5,7 +5,7 @@ This is just a sample project for goodreads APIs.
 For running the project, install docker and docker-compose, and then run the commands below.
 
 ```bash
-cp .env.sample .env && cd .scripts && chmode +x entrypoint.sh load_fixtures.sh && cd .. && docker compose up --build
+cp .env.sample .env && cd .scripts && chmod +x entrypoint.sh load_fixtures.sh && cd .. && docker compose up --build
 ```
 
 You can see the apis and use them from [swagger](http://localhost:8000/api/schema/swagger-ui/)
